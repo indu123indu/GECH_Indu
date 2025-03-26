@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This keyword in HTMl</title>
+</head>
+<body>
+    <h1>this keyword </h1>
+    <p>this keyword will options to current object </p>
+
+    <script>
+        //console.log(this);
+         function hello() {
+            console.log(this);
+
+         }
+         //window.hello( );
+         //alert();
+
+         const fun = () => {
+            console.log(this);
+         }
+
+         //fun1();
+         const obj1 = {
+            firstname: "Indu",
+            lastname: "A",
+            age: 23,
+            address: "karnataka",
+            about:function(){
+                console.log(this);
+            }
+         }
+
+         obj1.about();
+    </script>
+</body>
+</html>

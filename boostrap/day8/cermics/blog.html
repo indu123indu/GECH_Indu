@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ceramic Blog</title>                                                        
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .hero {
+            position: relative;
+            background: url("./WhatsApp Image 2025-03-02 at 07.46.25.jpeg") no-repeat center center/cover;
+            height: 300px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .blog-section {
+            padding: 50px 0;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            font-size: 1.5rem;
+            color: #333;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <!--Nav bar section-->
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Ceramic</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="workshop.html">Workshop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link text-danger active" href="contact.html">Contact</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                </ul>
+                <button class="btn btn-success ms-3">Get Started</button>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <div class="hero">
+        <h1>Blog</h1>
+    </div>
+
+    <div class="container blog-section">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card mb-4">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="./ceramic11.jpeg" class="img-fluid rounded-start" alt="Blog Image">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">What affects the quality of ceramic products?</h5>
+                                <p class="card-text"><small class="text-muted">17 August 2022</small></p>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis...</p>
+                                <a href="#" class="btn btn-outline-dark">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center mb-4">
+                    <img src="./ceramic2.jpeg" class="img-fluid rounded" alt="Sidebar Image">
+                </div>
+                
+                <h5 class="text-center">Our Social Media</h5>
+                <div class="text-center social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <hr>
+                <h5 class="text-center">Subscribe to our Newsletter</h5>
+                <form class="text-center">
+                    <input type="text" class="form-control mb-2" placeholder="First name">
+                    <input type="email" class="form-control mb-2" placeholder="Email">
+                     <div class="mb-4">
+                        <label for="message" class="form-label">Message:</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Type your message here"></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container blog-section">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card blog-card">
+                    <img src="./work3.jpg" alt="Ceramic Bowls">
+                    <div class="card-body">
+                        <h5 class="card-title">Ceramic soup bowls</h5>
+                        <p class="text-muted">17 August 2022</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                        <a href="#" class="text-danger">Read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card blog-card">
+                    <img src="./wrok.jpg" alt="Quality of Ceramic Products">
+                    <div class="card-body">
+                        <h5 class="card-title">What affects the quality of ceramic products?</h5>
+                        <p class="text-muted">17 August 2022</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                        <a href="#" class="text-danger">Read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card blog-card">
+                    <img src="./work2.jpg" alt="How Ceramics Are Made">
+                    <div class="card-body">
+                        <h5 class="card-title">How ceramics are made</h5>
+                        <p class="text-muted">17 August 2022</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                        <a href="#" class="text-danger">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

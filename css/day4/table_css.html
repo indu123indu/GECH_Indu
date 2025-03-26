@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table in CSS</title>
+    <style>
+        .table_con {
+            border: 2px solid black;
+            width: 80%;
+            text-align: center;
+            table-layout: fixed;
+            border-collapse: collapse;
+        }
+
+        .table_con, th, td {
+            border: 1px solid black;
+        }
+
+        tr:nth-child(2n) {
+            background-color: aquamarine;
+        }
+        
+        tr:nth-child(2n+1) {
+            background-color: aquamarine;
+        }
+
+        tr:first-child {
+            background-color: palevioletred;
+            color: white;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+    <table class="table_con">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Age</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Indu</td>
+                <td>23</td>
+                <td>23</td>
+                <td>Karnataka</td>
+            </tr>
+            <tr>
+                <td>Suma</td>
+                <td>24</td>
+                <td>23</td>
+                <td>Karnataka</td>
+            </tr>
+            <tr>
+                <td>anu</td>
+                <td>23</td>
+                <td>o45</td>
+                <td>Karnataka</td>
+            </tr>
+            <tr>
+                <td>sanchitha m o</td>
+                <td>23</td>
+                <td>039</td>
+                <td>Karnataka</td>
+            </tr>
+            <tr>
+                <td>sushma</td>
+                <td>23</td>
+                <td>055</td>
+                <td>Karnataka</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

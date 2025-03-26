@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts in CSS</title>
+    <style>
+        /* Importing Poppins font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+        /* Poppins Font Styles */
+        .poppins-thin { font-family: "Poppins", sans-serif; font-weight: 100; font-style: normal; }
+        .poppins-extralight { font-family: "Poppins", sans-serif; font-weight: 200; font-style: normal; }
+        .poppins-light { font-family: "Poppins", sans-serif; font-weight: 300; font-style: normal; }
+        .poppins-regular { font-family: "Poppins", sans-serif; font-weight: 400; font-style: normal; }
+        .poppins-medium { font-family: "Poppins", sans-serif; font-weight: 500; font-style: normal; }
+        .poppins-semibold { font-family: "Poppins", sans-serif; font-weight: 600; font-style: normal; }
+        .poppins-bold { font-family: "Poppins", sans-serif; font-weight: 700; font-style: normal; }
+        .poppins-extrabold { font-family: "Poppins", sans-serif; font-weight: 800; font-style: normal; }
+        .poppins-black { font-family: "Poppins", sans-serif; font-weight: 900; font-style: normal; }
+        
+        /* Italic Variants */
+        .poppins-thin-italic { font-family: "Poppins", sans-serif; font-weight: 100; font-style: italic; }
+        .poppins-extralight-italic { font-family: "Poppins", sans-serif; font-weight: 200; font-style: italic; }
+        .poppins-light-italic { font-family: "Poppins", sans-serif; font-weight: 300; font-style: italic; }
+        .poppins-regular-italic { font-family: "Poppins", sans-serif; font-weight: 400; font-style: italic; }
+        .poppins-medium-italic { font-family: "Poppins", sans-serif; font-weight: 500; font-style: italic; }
+        .poppins-semibold-italic { font-family: "Poppins", sans-serif; font-weight: 600; font-style: italic; }
+        .poppins-bold-italic { font-family: "Poppins", sans-serif; font-weight: 700; font-style: italic; }
+        .poppins-extrabold-italic { font-family: "Poppins", sans-serif; font-weight: 800; font-style: italic; }
+        .poppins-black-italic { font-family: "Poppins", sans-serif; font-weight: 900; font-style: italic; }
+
+        /* Container Styles */
+        .container {
+            border: 2px solid red;
+            background-color: blueviolet;
+            width: 300px;
+            height: 200px;
+            padding: 20px;
+            color: white;
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* Inner Container */
+        .inner-container {
+            border: 2px solid orange;
+            padding: 30px;
+            width: 80%;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: small;
+            font-weight: 800;
+            font-variant: small-caps;
+            background-color: aqua;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="inner-container">
+            This is the inner container text.
+        </div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam alias, facere soluta dolorem cumque facilis placeat voluptates!
+    </div>
+</body>
+</html>

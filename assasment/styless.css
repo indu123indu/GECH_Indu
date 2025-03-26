@@ -1,0 +1,766 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+/* Navigation */
+header {
+    background: #002244;
+    color: #fff;
+    padding: 15px 0;
+    text-align: right;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: yellow;
+}
+
+/* Hero Section */
+.hero {
+    background: url('./openbook.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 50px;
+}
+
+.hero-text h2 {
+    font-size: 30px;
+}
+
+.hero-text p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: yellow;
+    color: black;
+    text-decoration: none;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: orange;
+}
+
+.about {
+    padding: 50px;
+    background-color: #f8f8f8;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.about-text {
+    max-width: 500px;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    color: #002244;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #002244;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #ffcc00;
+    color: #002244;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+}
+
+.departments {
+    text-align: center;
+    padding: 50px;
+    background-color: #f8f8f8;
+}
+
+.departments h2 {
+    font-size: 28px;
+    color: #002244;
+    margin-bottom: 10px;
+}
+
+.departments p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.dept-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.dept-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+}
+
+.dept-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.dept-card h3 {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #002244;
+}
+
+.dept-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .dept-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+/* Footer */
+footer {
+    background-color: navy;
+    color: white;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content {
+    max-width: 400px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-contact h4 {
+    font-size: 18px;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: navy;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a.active {
+    border-bottom: 2px solid gold;
+}
+
+/* Banner Section */
+.banner {
+    background: url("./penlogo.jpg") no-repeat center center/cover;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-align: center;
+}
+
+.banner-text h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.banner-text p {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Departments Section */
+.departments {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 40px;
+}
+
+.dept-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.dept-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.dept-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* Footer */
+footer {
+    background-color: navy;
+    color: white;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content {
+    max-width: 400px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-contact h4 {
+    font-size: 18px;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: navy;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a.active {
+    border-bottom: 2px solid gold;
+}
+
+/* Banner Section */
+.banner {
+    background: url("./penlogo.jpg") no-repeat center center/cover;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.banner-text h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.banner-text p {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Gallery Section */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 40px;
+    justify-content: center;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background-color: navy;
+    color: white;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content {
+    max-width: 400px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-contact h4 {
+    font-size: 18px;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: navy;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a.active {
+    border-bottom: 2px solid gold;
+}
+
+/* Banner Section */
+.banner {
+    background: url("./penlogo.jpg") no-repeat center center/cover;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.banner-text h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.banner-text p {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Contact Section */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.contact-info {
+    width: 40%;
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-info h2, .contact-form h2 {
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+    color: navy;
+}
+
+/* Contact Form */
+.contact-form {
+    width: 50%;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input, .contact-form textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: navy;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: darkblue;
+}
+
+
+
+/* Google Map Styling */
+.map-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.map-container h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+/* Footer */
+footer {
+    background: #002244;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #0a1931;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: navy;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a.active {
+    border-bottom: 2px solid gold;
+}
+
+/* Banner Section */
+.banner {
+    background: url("./penlogo.jpg") no-repeat center center/cover;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.banner-text h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.banner-text p {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Contact Section */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.contact-info {
+    width: 40%;
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-info h2, .contact-form h2 {
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+    color: navy;
+}
+
+/* Contact Form */
+.contact-form {
+    width: 50%;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input, .contact-form textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: navy;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: darkblue;
+}
+
+/* Footer */
+footer {
+    background-color: navy;
+    color: white;
+    padding: 30px 50px;
+    text-align: center;
+}
+
+
+
+/* Footer */
+footer {
+    background: #002244;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}

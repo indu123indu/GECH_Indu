@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array destrtcuring</title>
+</head>
+<body>
+    <h1>Array function</h1>
+    <script>
+        let array1 = ["item1", "item2", "item3", "item4", "item5", "item6", "item7", "item8",];
+        console.log(array1);
+        let var1 = array1[0];
+        let var2 = array1[1];
+        let var3 = array1[2];
+        let var4 = array1[3];
+        console.log(var1, var2, var3, var4);
+
+        let Array2 = ["item1", "item2", "item3", "item4", "item5", "item6", "item7", "item8"];
+
+        const [var5 , var6, ...rest] = Array2;
+        console.log("array: ", var5, var6);
+
+        let Array3 = ["item1", "item2", "item3"];
+        const [var7 , var9] = Array2;
+        console.log("last: ", var7, var9);
+
+
+        //users
+        const users =[
+            { firstname:"pavna1", age: 21, address : "karanataka 00" },
+            { firstname:"pavna2", age: 22, address : "karanataka" },
+            { firstname:"pavna3", age: 23, address : "karanataka" },
+           
+    ]
+    const[{address}, user2, user3]=users;
+    console.log(address);
+    console.log(user2);
+    console.log(user3);
+    
+    </script>
+</body>
+</html>

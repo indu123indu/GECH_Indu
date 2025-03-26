@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elements & Classes in CSS</title>
+    <style>
+        /* Highlight Selection */
+        ::selection {
+            color: brown;
+            background-color: yellow;
+        }
+
+        /* Navigation Links */
+        .atag {
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 16px;
+            color: black;
+            transition: color 0.3s ease;
+        }
+
+        /* Hover Effect */
+        .atag:hover {
+            color: red; /* Changed to valid color */
+        }
+
+        /* Add Bullet (•) Before Links */
+        .atag::before {
+            content: "• ";
+        }
+
+        /* First Letter Styling */
+        .first::first-letter {
+            font-size: 24px;
+            font-weight: bold;
+            color: red;
+        }
+
+        /* First Line Styling */
+        .sec::first-line {
+            color: orange;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="" class="atag">HOME</a>
+            <a href="" class="atag">About</a>
+            <a href="" class="atag">Contact</a>
+            <a href="" class="atag">Login</a>
+        </div>
+        <p class="first">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem sequi, aspernatur pariatur eligendi vero necessitatibus vitae libero eos laboriosam nobis repellendus quia. Vitae cum officia magni aperiam corrupti non nostrum.</p>
+        <p class="sec">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi inventore sint veniam amet ipsam, iure reprehenderit rerum quisquam aperiam repellat numquam mollitia qui minima non ad, quaerat quidem exercitationem minus.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in Java Script</title>
+</head>
+<body>
+    <h1>How the Events Work in Javascript</h1>
+    <p>1. Click Event</p>
+    <p>2. Keyboard Event</p>
+    <p>3. Form Event</p>
+    <p>4. Document and Window Events</p>
+    <p>5. Error  and Exception Events</p>
+    <p>6. Touch  Events</p>
+    <p>7. Animation Events</p>
+    <p>8. Transistion Events </p>
+    <p>9. Drag and Drop Events</p>
+    <button id="myButton">Click Me</button>
+    <p id="message"></p>
+
+    
+    <script>
+        //1. Click Event
+        // Get the button element
+        const button = document.getElementById("myButton");
+        const message = document.getElementById("message");
+
+        // Add click event listener
+        button.addEventListener("click", function() {
+            message.textContent = "Button Clicked";
+        });
+
+        //2. Keyboard event
+        
+        
+    </script>
+    
+</body>
+</html>

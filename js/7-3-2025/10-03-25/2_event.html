@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Event Example</title>
+</head>
+<body>
+
+    <input type="text" id="textInput" placeholder="Type something...">
+    <p id="message"></p>
+
+    <script>
+        // Get the input field and message display
+        const inputField = document.getElementById("textInput");
+        const message = document.getElementById("message");
+
+        // Add keyup event listener
+        inputField.addEventListener("keyup", function(event) {
+            message.textContent = "You pressed: " + event.key;
+        });
+    </script>
+
+</body>
+</html>

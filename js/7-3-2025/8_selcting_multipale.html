@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selecting Multiple Elements</title>
+</head>
+<body>
+  <h1>Selecting Multiple Elements</h1>
+  <p>1. getElementsByClassName</p>
+  <p>2. querySelectorAll</p>
+  <div class="child">Lorem1</div>
+  <div class="child">Lorem2</div>
+  <div class="child">Lorem3</div>
+  <div class="childs">Lorem1</div>
+  <div class="childs">Lorem2</div>
+  <div class="childs">Lorem3</div>
+  <script>
+    const res = document.getElementsByClassName("child");
+    console.log(res);
+    Array.prototype.forEach.call(res, function(i) {
+      console.log(i);
+      i.style.color = "red";
+      i.style.fontSize = "30px";
+    });
+
+    // 2. querySelectorAll
+    const res1 = document.querySelectorAll(".childs");
+    console.log(res1);
+    res1.forEach((curEle) => {
+      curEle.style.backgroundColor = "blue";
+    });
+  </script>
+</body>
+</html>

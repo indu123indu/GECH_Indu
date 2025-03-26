@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media in HTML</title>                  
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            border: 1px solid black;
+            background-color: orchid; /* Default background color */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Corrected @media query */
+        @media only screen and (min-width: 300px) and (max-width: 600px) {
+            .container {
+                background-color: aquamarine;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="child fir"></div>
+        <div class="child sce"></div>
+        <div class="child thi"></div>
+        <div class="child fou"></div>
+        <div class="child fiv"></div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus, porro tempore quae iure sint quibusdam reprehenderit sapiente consectetur, quia aliquid animi nemo harum labore rerum vitae consequuntur tempora? Voluptas, a?
+    </div>
+</body>
+</html>

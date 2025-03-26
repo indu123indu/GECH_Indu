@@ -1,0 +1,78 @@
+/* #div{
+    background-color:aqua;
+    text-align: center;
+    font-size: larger;
+    background-clip: padding-box;
+}
+body{
+    background-image: url("image.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right top;
+    background-attachment: fixed;
+    opacity: 1;
+}
+.ptag{
+    margin:20px;
+    padding: 40px;
+    font-weight: 100;
+    font-size: medium;
+    background-color: chartreuse;
+    background-clip:border-box ;  
+
+} */
+    /* opacity: 0.5; */
+    /* opacity: 0; */
+      /* background-attachment: scroll; */
+    /* background-clip: content-box;
+}
+  
+
+/* p{
+    background-image: url("image.jpeg");
+    background-clip: border-box;
+    background-clip: content-box;
+    background-clip: padding-box;
+} */
+
+.container{
+    /* border: 1px solid black; */
+    
+    /* margin-top: 10%;
+    margin-bottom: 50%;
+    margin-right: 40%;
+    margin-left: 50%; */
+
+    /* margin: 10% 30% 20% 20%; */
+
+    /* padding-left: 40%;
+    padding-right: 20%;
+    padding: 10%;
+    padding: 10%; */
+    padding: 5%;
+
+    text-align: center;
+   
+    
+}
+
+body{
+    background-color: beige;
+    background-image: url(./butterfly.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right-top;
+    background-attachment: fixed;
+    opacity: 1;
+}
+p{
+    font-weight: bolder;
+    font-size: larger;
+    margin: 8%;
+    padding: 50px;
+    background-clip: padding-box;
+    background-color:chartreuse;
+    background-image: url(./image.jpeg);
+    outline: 2pxsolid block;
+    /* opacity: 0.5; */
+}

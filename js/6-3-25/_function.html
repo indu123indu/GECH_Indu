@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Functions</title>
+  <style>
+    table, td, th {
+      border: 2px solid;
+      border-collapse: collapse;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Age</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody id="table-body">
+    </tbody>
+  </table>
+  <script>
+    const users = [
+      { firstName: "Sanchitha", age: 22, "address": "Balehonnuru" },
+      { firstName: "Sanchitha3", age: 25, "address": "Koppa" },
+      { firstName: "Sanchitha4", age: 26, "address": "Sringeri" },
+      { firstName: "Sanchitha6", age: 22, "address": "Gadag" },
+      { firstName: "Sanchitha7", age: 29, "address": "Raichuru" },
+      { firstName: "Sanchitha8", age: 28, "address": "India" },
+    ]
+
+    let tableBody = document.getElementById('table-body');
+    let content = "";
+    for (let item of users) {
+      content += `
+        <tr>
+          <td>${item.firstName}</td>
+          <td>${item.age}</td>
+          <td>${item.address}</td>
+        </tr>
+      `;
+    }
+    tableBody.innerHTML = content;
+  </script>
+</body>
+</html>

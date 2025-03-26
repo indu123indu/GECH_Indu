@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkerboard Pattern</title>
+    <style>
+        .board {
+            display: grid;
+            grid-template-columns: repeat(8, 50px);
+            grid-template-rows: repeat(8, 50px);
+            width: 400px;
+            height: 400px;
+            
+            
+        }
+        .square {
+            width: 50px;
+            height: 50px;
+        }
+        .black {
+            background-color: black;
+        }
+        .white {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="board">
+        <script>
+            for (let row = 0; row < 8; row++) {
+                for (let col = 0; col < 8; col++) {
+                    let div = document.createElement("div");
+                    div.className = "square " + ((row + col) % 2 === 0 ? "white" : "black");
+                    document.querySelector(".board").appendChild(div);
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

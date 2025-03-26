@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Touch Event Example</title>
+    <style>
+        #touchBox {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 200px;
+            font-size: 18px;
+            border: 2px solid #000;
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Touch Event Example</h2>
+    <div id="touchBox">Touch Me</div>
+    <p id="message"></p>
+
+    <script>
+        const touchBox = document.getElementById("touchBox");
+        const message = document.getElementById("message");
+
+        // Function to generate a random color
+        function getRandomColor() {
+            return "#" + Math.floor(Math.random() * 16777215).toString(16);
+        }
+
+        // Touch start event
+        touchBox.addEventListener("touchstart", function(event) {
+            event.preventDefault(); // Prevent default behavior (e.g., scrolling)
+            message.textContent = "Touch started!";
+            touchBox.style.backgroundColor = getRandomColor();
+        });
+
+        // Touch move event
+        touchBox.addEventListener("touchmove", function(event) {
+            event.preventDefault(); // Prevent default behavior (e.g., scrolling)
+            message.textContent = "Touch moving!";
+            touchBox.style.backgroundColor = getRandomColor();
+        });
+
+        // Touch end event
+        touchBox.addEventListener("touchend", function(event) {
+            event.preventDefault(); // Prevent default behavior (e.g., scrolling)
+            message.textContent = "Touch ended!";
+            touchBox.style.backgroundColor = getRandomColor();
+        });
+    </script>
+
+</body>
+</html>

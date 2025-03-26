@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table using for...of and for...in</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+            background-color: bisque;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <table id="dataTable">
+        <thead>
+            <tr id="tableHeader">
+                <!-- Headers will be inserted here -->
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table rows will be inserted here -->
+        </tbody>
+    </table>
+
+    <script>
+        const users = [
+        { name: "vinth", age: 25, city: "New York" },
+            { name: "parvam", age: 30, city: "Los Angeles" },
+            { name: "indu", age: 22, city: "Chicago" },
+            { name: "indu1", age: 22, city: "Chicago"},
+            { name: "indu2", age: 22, city: "Chicago"},
+            { name: "indu3", age: 22, city: "Chicago"}, 
+            { name: "indu4", age: 22, city: "Chicago"}, 
+            { name: "indu5", age: 22, city: "Chicago"},
+            { name: "indu6", age: 22, city: "Chicago"}, 
+            { name: "indu7", age: 22, city: "Chicago"}, 
+            { name: "indu8", age: 22, city: "Chicago"},
+        ];
+
+        const tableHeader = document.getElementById("tableHeader");
+        const tableBody = document.querySelector("#dataTable tbody");
+
+        // Using for...in to create table headers
+        for (let key in users[0]) {
+            let th = document.createElement("th");
+            th.textContent = key.charAt(0).toUpperCase() + key.slice(1); // Capitalize first letter
+            tableHeader.appendChild(th);
+        }
+
+        // Using for...of to create table rows
+        for (let user of users) {
+            let row = document.createElement("tr");
+            for (let key in user) {
+                let cell = document.createElement("td");
+                cell.textContent = user[key];
+                row.appendChild(cell);
+            }
+            tableBody.appendChild(row);
+        }
+    </script>
+
+</body>
+</html>

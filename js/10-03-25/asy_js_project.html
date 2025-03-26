@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async JS Project</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            transition: background-color 0.5s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #date_time {
+            font-size: 20px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Async JS Project</h1>
+        <p id="date_time"></p> <!-- Added element to show date & time -->
+        <button id="btn" type="button">Stop</button>
+    </div>
+
+    <script>
+        // Function to generate a random color
+        function getRandomColor() {
+            const red = Math.floor(Math.random() * 256);
+            const green = Math.floor(Math.random() * 256);
+            const blue = Math.floor(Math.random() * 256);
+            return `rgb(${red}, ${green}, ${blue})`;
+        }
+
+        // Change background color every second
+        let intervalId = setInterval(() => {
+            document.body.style.backgroundColor = getRandomColor();
+        }, 1000);
+
+        // Function to update date and time every second
+        setInterval(() => {
+            const date = new Date(); // Create a new Date object
+            console.log(date.toDateString()); // Fixed method name
+            console.log(date.toLocaleTimeString()); // Fixed method name
+
+            // Display date & time in the HTML
+            document.querySelector("#date_time").innerText = `${date.toDateString()} - ${date.toLocaleTimeString()}`;
+        }, 1000);
+
+        // Stop changing background on button click
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("btn").addEventListener("click", function (e) {
+                clearInterval(intervalId);
+                e.target.textContent = `Stopped at ${document.body.style.backgroundColor}`;
+            });
+        });
+    </script>
+</body>
+</html>

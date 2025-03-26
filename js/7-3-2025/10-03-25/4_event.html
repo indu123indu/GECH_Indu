@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error & Exception Handling</title>
+</head>
+<body>
+
+    <h1>JavaScript Error & Exception Events</h1>
+    <p id="message"></p>
+    <button onclick="causeError()">Click to Cause Error</button>
+
+    <script>
+        // Global error event listener
+        window.addEventListener("error", function(event) {
+            console.error("An error occurred:", event.message);
+            document.getElementById("message").textContent = "Error caught: " + event.message;
+        });
+
+        // Function that causes an error
+        function causeError() {
+            try {
+                // Intentional error: undefinedFunction() does not exist
+                undefinedFunction();
+            } catch (error) {
+                console.log("Caught an error:", error.message);
+                document.getElementById("message").textContent = "Caught an error: " + error.message;
+            }
+        }
+    </script>
+
+</body>
+</html>

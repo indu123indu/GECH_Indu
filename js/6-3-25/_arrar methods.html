@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array methods</h1>
+    <p>1. foreach</p>
+    <p>2. map</p>
+    <p>filter</p>
+    <p>4.reduce</p>
+    <p>5.sort</p>
+    <p>6.splice</p>
+    <p>7.each</p>
+    <p>8.some</p>
+
+    <script>
+        const array1 =[1, 2, 3, 4, 5, 6];
+        //1. foreach
+        array1.forEach((curEle, index, array) =>{
+            console.log(curEle * curEle, "index is: ", index, "array is: ", array) ;
+        }
+    )
+
+
+    const users = [
+      { firstName: "Indu", age: 22, "address": "Balehonnuru" },
+      { firstName: "Indu3", age: 25, "address": "Koppa" },
+      { firstName: "Indu4", age: 26, "address": "Sringeri" },
+      { firstName: "Indu6", age: 22, "address": "Gadag" },
+      { firstName: "Sanchitha7", age: 29, "address": "Raichuru" },
+      { firstName: "Sanchitha8", age: 28, "address": "India" },
+    ]
+    users.forEach((curEle) => {
+        console.log(curEle.firstName);
+    })
+
+    //2.map
+    const array2 = [2, 4, 6, 8, 10, 12,14];
+    const array3 =array2.map((curEle, index, array) => {
+        return curEle * curEle;
+    })
+    console.log("array2: ",array2);
+    console.log("array3: ",array3);
+
+
+    const users1 = [
+      { firstName: "Indu", age: 22, "address": "Balehonnuru" },
+      { firstName: "Indu3", age: 25, "address": "Koppa" },
+      { firstName: "Indu4", age: 26, "address": "Sringeri" },
+      { firstName: "Indu6", age: 22, "address": "Gadag" },
+]
+const users2 = users1.map((ele) => {
+    return ele. firstName;
+})
+
+console.log("useres2: ", users2);
+
+
+//3. filter
+const array4 = [1,2,3, 4,5, 6,7, 8,9, 10];
+const array5 =array4.filter((curEle) => {
+         return curEle % 2 == 0;
+})
+console.log("array5: ", array5);
+
+//4.reduce 
+const array6 = [1,2,3, 4,5, 6,7, 8,9, 10];
+const res =array6.reduce((previous,current,index) => {
+         return previous+current;
+})
+console.log("the result is: ",res);
+
+//5. sort
+const fruits = ['banana', 'apple', 'orange', 'mango', 'grape'];
+
+console.log("Original array:");
+console.log(fruits);
+
+fruits.sort();
+
+console.log("Sorted array:");
+console.log(fruits);
+
+//6. splice
+const colors = ['red', 'green', 'blue', 'yellow', 'orange'];
+
+console.log("Original array:");
+console.log(colors);
+
+// Remove the third element (index 2)
+colors.splice(2, 1);
+
+console.log("Array after removing the third element:");
+console.log(colors);
+
+// Add a new element at the second position (index 1)
+colors.splice(1, 0, 'purple');
+
+console.log("Array after adding a new element at the second position:");
+console.log(colors);
+
+//7. Every
+const numbers = [10, 20, 30, 40, 50];
+
+console.log("Original array:");
+console.log(numbers);
+
+// Check if all numbers are greater than 0
+const result = numbers.every((num) => num > 0);
+
+console.log("Result:");
+console.log(result);
+
+//8.Some
+const products = [
+  { name: 'Laptop', price: 1000, inStock: true },
+  { name: 'Phone', price: 500, inStock: false },
+  { name: 'Tablet', price: 800, inStock: true },
+];
+
+console.log("Original array:");
+console.log(products);
+
+// Check if at least one product is out of stock
+const isOutOfStock = products.some((product) => !product.inStock);
+
+console.log("Is any product out of stock?");
+console.log(isOutOfStock);
+
+
+    </script>
+    
+</body>
+</html>

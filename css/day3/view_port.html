@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Views in CSS</title>  
+
+    <style>
+        .container {
+            background-color: blueviolet;
+            padding: 10px;
+        }
+        .main {
+            background-color: coral;
+            height: 80vh;
+            padding: 10px;
+        }
+        .navbar {
+            background-color: cornflowerblue;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .footer {
+            background-color: brown;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .partner {
+            background-color: blue;
+            width: 10vw;
+            height: 50vh;
+            border: 1px solid black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        .child {
+            width: 50%;
+            height: auto;
+            border: 2px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="navbar">Navbar</div>
+    
+    <div class="container">Container</div>
+
+    <div class="main">
+        Main Content
+        <div class="child">
+            This is a child. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur doloribus quia facilis nulla dolore. In beatae quia voluptatibus quae, unde, a tempore pariatur sequi quod blanditiis repudiandae corporis eligendi. Id.
+        </div>
+    </div>
+
+    <div class="partner">Partner</div>
+
+    <div class="footer">
+        <footer>Footer</footer>
+    </div>
+
+</body>
+</html>

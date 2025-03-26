@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb On/Off</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        img {
+            width: 150px;
+            height: auto;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bulb On/Off</h1>
+    <img id="bulb" src="C:\Users\sudee\Downloads\WhatsApp Image 2025-03-03 at 2.03.45 PM.jpeg" alt="Bulb">
+    <br>
+    <button onclick="toggleBulb()">Toggle Bulb</button>
+
+    <script>
+        let isBulbOn = false;
+        function toggleBulb() {
+            const bulb = document.getElementById("bulb");
+            isBulbOn = !isBulbOn;
+            bulb.src = isBulbOn 
+                ? "https://www.w3schools.com/js/pic_bulbon.gif" 
+                : "https://www.w3schools.com/js/pic_bulboff.gif";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variables</title>
+    <style>
+        :root{
+            --aqua:rgb(10, 248 46)
+            --green:rgb(20, 156, 48)
+        }
+        .ptag{
+            background-color: rgb(40, 155, 14);
+        }
+        .divtag{
+            background-color: var(--green);
+        }
+        .ptag1{
+            background-color: var(red);
+        }
+        .divtag2{
+            background-color: beige;
+        }
+        .container{
+            width: 50vw;
+            height: 30vh;
+            margin: 20px 1px;
+            background-color: beige;
+            border: 2px solid rgb(red, green, blue);
+            padding: auto;
+
+        }
+        .fir{
+            background-color: bisque;
+            z-index: 2;
+            border: 1px;
+            margin: 100px 1px;
+            width: 30vw;
+            height: 60vh;
+        }
+        .sce{
+            background-color: azure;
+            top: 10px;
+            margin: auto;
+            width: 30vw;
+            height: 30vh;
+            z-index: 3;
+
+        }
+    </style>
+</head>
+<body>
+    <p class="ptag">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, cumque aliquam assumenda ipsam minima veniam. Hic voluptatum minus ut officiis itaque autem reprehenderit nemo ullam fuga voluptate, praesentium tempore non.z</p>
+    <p class="divtag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dicta architecto quam ullam odio! Nesciunt repellat ut deserunt similique libero quidem alias nulla, odio consequatur nostrum quis corporis, expedita optio!</p>
+    <p class="ptag1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae expedita quae amet rem quam officia autem vel, pariatur deserunt quia veritatis illo voluptatem veniam adipisci dolorem laudantium magni? Sapiente, obcaecati!</p>
+    <p class="divtag2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam corrupti qui fuga aperiam inventore? Ducimus sint voluptas ullam repellendus. Porro totam minus dolor ut suscipit dignissimos esse nulla, iste similique.</p>
+
+    <div class="container">
+        <div class="child first">1</div>
+        <div class="child sec">2</div>
+    </div>
+</body>
+</html>

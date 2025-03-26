@@ -1,0 +1,57 @@
+/* 1. Universal Selector - Applies to all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Element Selector - Targets specific elements */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+/* 3. ID Selector - Targets an element with a specific ID */
+#uniqueDiv {
+    background-color: lightblue;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* 4. Class Selector - Targets all elements with a specific class */
+.content {
+    background-color: lightgray;
+    padding: 10px;
+    margin: 10px 0;
+    border-left: 5px solid blue;
+}
+
+/* 5. Descendant Selector - Targets <p> inside .container */
+.container p {
+    color: green;
+    font-size: 18px;
+}
+
+/* 6. Child Selector - Targets direct <p> children inside .container */
+.container > p {
+    font-weight: bold;
+}
+
+/* 7. Grouping Selector - Styles multiple elements at once */
+h1, p {
+    margin-bottom: 10px;
+}
+
+/* 8. Pseudo-Class Selector - Changes color when hovering */
+p:hover {
+    color: red;
+    cursor: pointer;
+}
+
+/* 9. Attribute Selector - Styles elements with a specific attribute */
+p[class="ptag"] {
+    font-style: italic;
+    color: darkblue;
+}

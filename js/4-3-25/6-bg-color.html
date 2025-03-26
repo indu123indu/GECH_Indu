@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing  the BG</title>
+    <style>
+        .container{
+            justify-content: center;
+           align-items: center;
+            display: flex;
+            height: 80vh;
+            width: 100 vw;
+
+
+            }
+
+            .child{
+                text-align: center;
+            }
+        
+    </style>
+</head>
+<body>
+    
+    
+    <div class="container" id="container">
+        <div class="child">
+            <h1 id="color_code">Background Color is:</h1><span id="text">rgb(255,0,0)</span> <br>
+            <button type="button" id="Change_bg_btn" onclick="handLeClick()">Change the background color</button>
+
+        </div>
+    </div>
+    <script>
+        function getBgColor() {
+            const red = Math.floor(Math.random() * 256);
+            const green = Math.floor(Math.random() * 256);
+            const blue  = Math.floor(Math.random() * 256);
+            // rgb(61 61 85)
+            return ` rgb(${red} , ${green} , ${blue})`;  //backticks 
+            
+        }
+        function handLeClick(){
+            const bg_color = getBgColor();
+            //console.log(bg_color);
+            const container = document.getElementById("container");
+            container.style.backgroundColor=bg_color;
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

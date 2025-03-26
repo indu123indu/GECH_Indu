@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+    <h1>how many types we can declare the variable</h1>
+    <h3>4. types</h3>
+    <p>1. automatically</p>
+    <p>2. using var</p>
+    <p>3. using let</p>
+    <p>4. using const</p>
+
+    <script>
+        //1. automatically
+        var1 = "Hello"
+        console.log("The value is : " + var1);
+        console.log("The type is : " + typeof var2);
+
+        //2. var
+        var var2 = 24;
+        console.log("The value is : " + var2);
+        console.log("The type is : " + typeof var2);
+
+        //3. using let
+        let var3 = true;
+        console.log("The value is : " + var3);
+        console.log("The type is : " + typeof var3)
+
+        //4. using const
+        const var4 = 121n;
+        console.log("The value is : " + var4);
+        console.log("The type is : " + typeof var4);
+
+
+    </script>
+    <script>
+        //Difference between var , let , const
+        // re declaring
+        var var1=23;
+        console.log("1st:",var1);
+        var var1="Hello"
+        console.log("2nd:", var1);
+
+        //let
+        let var12="var12";
+        console.log("let 1st:", var12);
+        var12=12;
+        console.log("let 1st:", var12);
+
+        //const
+        let pi = 3.14;
+console.log("1st:", pi);
+pi = 23.4;
+console.log("2nd:", pi);
+
+
+    </script>
+    
+    
+</body>
+</html>

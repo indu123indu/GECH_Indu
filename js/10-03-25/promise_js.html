@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise in JavaScript</title>
+</head>
+<body>
+    <h1>Promise in JavaScript</h1>
+    <p>A promise represents a future value, which can either be resolved or rejected.</p>
+    <p>1. **Pending** - Initial state.</p>
+    <p>2. **Fulfilled** - When the promise resolves successfully.</p>
+    <p>3. **Rejected** - When the promise fails.</p>
+    
+    <pre>
+        const var_name = new Promise((resolve, reject) => {
+            // Asynchronous code here
+        });
+    </pre>
+
+    <script>
+        // List of available items
+        const items = ["vegetables", "salt", "rice", "chips"];
+
+        // Creating a promise
+        const result = new Promise((resolve, reject) => {
+            if (items.includes("vegetables") && items.includes("salt") && items.includes("rice")) {
+                resolve("Fried Rice is ready! 🍚");
+            } else {
+                reject("Cannot make Fried Rice. Missing ingredients!");
+            }
+        });
+
+        // 1. Handling Promise using then() and catch()
+        result
+            .then((value) => {
+                console.log("With then: ", value);
+            })
+            .catch((error) => {
+                console.log("With catch: ", error);
+            });
+
+        // 2. Handling Promise using async/await
+        const makeFriedRice = async () => {
+            try {
+                const res = await result;
+                console.log("With async/await:", res);
+            } catch (error) {
+                console.log("With async/await error:", error);
+            }
+        };
+
+        makeFriedRice(); // Calling the async function
+
+    </script>
+</body>
+</html>

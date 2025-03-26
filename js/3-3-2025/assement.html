@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Operations</title>
+</head>
+<body>
+    <h3>Arithmetic Operations</h3>
+    
+    <script>
+        let a = 10;
+        let b = 5;
+
+        console.log("Addition: " + (a + b));      
+        console.log("Subtraction: " + (a - b));    
+        console.log("Multiplication: " + (a * b)); 
+        console.log("Division: " + (a / b));       
+        console.log("Modulus: " + (a % b));       
+        console.log("Exponentiation: " + (a ** b));
+
+       // <h3>Logical Operator</h3>
+
+        let x = true;
+        let y = false;
+
+        console.log("AND (x && y): " + (x && y));  
+        console.log("OR (x || y): " + (x || y));   
+        console.log("NOT (!x): " + (!x));          
+        console.log("NOT (!y): " + (!y));          
+
+        // numbers
+        let c = 10;
+        let d = 5;
+        
+        console.log("AND (a > 5 && b < 10): " + (c > 5 && d < 10)); 
+        console.log("OR (a < 5 || b < 10): " + (c < 5 || d < 10));  
+        console.log("NOT (!(a > b)): " + (!(c > d)));
+        
+        //<h3> assign opertion
+
+            let e = 10;
+        console.log("Initial value of a: " + e);
+
+        a += 5;  // a = a + 5
+        console.log("After a += 5: " + e);
+
+        a -= 3;  // a = a - 3
+        console.log("After a -= 3: " + e);
+
+        a *= 2;  // a = a * 2
+        console.log("After a *= 2: " + e);
+
+        a /= 4;  // a = a / 4
+        console.log("After a /= 4: " + e);
+
+        a %= 3;  // a = a % 3
+        console.log("After a %= 3: " + e);
+
+        a **= 2; // a = a ** 2
+        console.log("After a **= 2: " + e);
+
+
+        // compo opretors
+        let f = 10;
+        let g = 5;
+        let h = "10";
+
+        console.log("f == h: " + (f == h));   // true (checks value only)
+        console.log("f === h: " + (f === h)); // false (checks value & type)
+        console.log("f != g: " + (f != g));   // true
+        console.log("f !== h: " + (f !== h)); // true (different types)
+        console.log("f > g: " + (f > g));     // true
+        console.log("f < g: " + (f < g));     // false
+        console.log("f >= 10: " + (f >= 10)); // true
+        console.log("f <= 5: " + (f <= 5));   // true
+
+        //bitwise opretros
+
+        let i = 5;  // Binary:  0101
+        let j = 3;  // Binary:  0011
+
+        console.log("i & j (AND): " + (i & j));  
+        console.log("i | j (OR): " + (i | j));   
+        console.log("i ^ j (XOR): " + (i ^ j));  
+        console.log("~i (NOT): " + (~i));        
+        console.log("i << 1 (Left Shift): " + (i << 1)); 
+        console.log("i >> 1 (Right Shift): " + (i >> 1)); 
+        console.log("i >>> 1 (Zero-fill Right Shift): " + (i >>> 1));
+
+        //Ternary Operator
+
+        let age = 18;
+        let result = (age >= 18) ? "You are an adult" : "You are a minor";
+        console.log(result); 
+
+        let num = 10;
+        let evenOrOdd = (num % 2 === 0) ? "Even" : "Odd";
+        console.log("Number is: " + evenOrOdd); 
+
+        let k = 5, l = 10;
+        let max = (k > l) ? k : l;
+        console.log("Maximum value is: " + max); 
+    
+    
+    </script>
+</body>
+</html>

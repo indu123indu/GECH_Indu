@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch in JS</title>
+</head>
+<body>
+    <h1>Fetch in JS</h1>
+    <div id="divtag"></div> <!-- Container to display fetched data -->
+
+    <script>
+        const url = "https://jsonplaceholder.typicode.com/posts"; // Sample API URL
+
+        const getUsers = async (url) => {
+            try {
+                const res = await fetch(url);
+                if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
+
+                const jsonRes = await res.json();
+                
+                jsonRes.forEach((curEle) => {
+                    console.log(curEle);
+
+                    // Create a container div for each post
+                    const responseDiv = document.createElement("div");
+                    responseDiv.style.border = "1px solid #ccc";
+                    responseDiv.style.padding = "10px";
+                    responseDiv.style.margin = "10px 0";
+
+                    // Create and append heading
+                    const htag = document.createElement("h2");
+                    htag.textContent = `Post ID: ${curEle.id}`;
+                    responseDiv.appendChild(htag);
+
+                    // Create and append paragraph (Body)
+                    const ptag = document.createElement("p");
+                    ptag.textContent = `Body: ${curEle.body}`;
+                    responseDiv.appendChild(ptag);
+
+                    // Append the responseDiv to the main container
+                    document.getElementById("divtag").appendChild(responseDiv);
+                });
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            }
+        };
+
+        getUsers(url); // Call the function
+    </script>
+</body>
+</html>

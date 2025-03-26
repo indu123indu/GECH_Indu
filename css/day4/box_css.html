@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+     .first, .sec {
+        width: 50vw;
+        height: 30vh;
+        padding: 20px;
+        margin: 25px;
+        box-sizing: border-box; /* Ensures padding and border are included in width/height */
+        text-align: center;
+        background-color: antiquewhite;
+     }
+     .first {
+        border: 2px solid pink;
+        font-size: 14px; /* Set explicit font size */
+     }
+     .sec {
+        border: 1px solid red;
+        padding: 16px;
+     }
+    </style>
+</head>
+<body>
+    <div class="first">Hi Indu</div>
+
+    <div class="sec">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis inventore et corporis voluptatibus suscipit corrupti totam nisi enim quis quos nemo error cupiditate, quia dolor reprehenderit saepe dignissimos libero quibusdam.</div>
+</body>
+</html>

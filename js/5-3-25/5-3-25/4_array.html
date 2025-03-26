@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>firstName</th>
+            <th>Age</th>
+            <th>Address</th>
+        </tr>
+        
+    </table>
+    
+    <h1>Array in JS</h1>
+    <p>Operations</p>
+    <p>1. push</p>
+    <p>2. pop</p>
+    <p>3. unshift</p>
+    <p>4. shift</p>
+    <script>
+        let array1 = [1, 2, 3, 4, 5, 6];
+        console.log(array1);
+        console.log(array1[3]);
+
+        // push and pop 
+        array1.push(23);
+        console.log("After pushing: ", array1);
+        console.log("Last Index: ", array1[6]);
+        const res = array1.pop();
+        console.log("The poped element is: ", res);
+        console.log("After poping: ", array1);
+
+        // unshift and shift
+        let array2 = [1, 2, 3, 4, 5, 6];
+        array2.unshift(21);
+        console.log("Unshift: ", array2);
+        console.log("First Index: ", array2[0]);
+        array2.shift();
+        console.log("Unshift: ", array2);
+
+    </script>
+    <script>
+        let array3 = [12, "Hi", true, null, { "Name": "Pavan" }]
+        //console.log(array3);
+        //console.log(typeof array3[4]);
+
+        for (let item of array3) {
+            console.log(`The item is ${item} and the type is ${typeof item}`);
+        }
+
+
+        let users = [
+            {
+                firstName: "darshan",
+                age: 23,
+                address: "Hassan"
+            },
+            {
+                firstName: "darshan",
+                age: 23,
+                address: "Hassan"
+            },
+            {
+                firstName: "darshan",
+                age: 23,
+                address: "Hassan"
+            },
+            {
+                firstName: "darshan",
+                age: 23,
+                address: "Hassan"
+            },
+        ]
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

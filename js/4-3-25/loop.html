@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops</title>
+</head>
+<body>
+    <h1> Looping statements</h1>
+    <p>1. for loop </p>
+    <p>1. while loop</p>
+    <p>1. do while loop</p>
+    <p>1. for in</p>
+    <p>1. for of</p>
+    <script>
+        // for in 
+        console.log("For in loop");
+        let number5=[12,13,14,15,16];
+        for(let item in number5){
+            console.log(item);
+        }
+        // for of 
+        console.log("For of loop");
+let numbers = [12, 13, 14, 15, 16];
+
+for (let item of numbers) {
+  console.log(item);
+}
+        
+        //while loop 
+        let array2= [1 , 2, 3];
+        console.log("While loop");
+        let j=0;
+        while(j<array2.length){
+            console.log(array2[j]);
+            j++;
+        }
+         // for loop
+         let array1 = ["item1", "item2", "item3", "item4"];
+let len = array1.length;
+console.log(len);
+
+for (let i = 0; i < len; i++) {
+  console.log(array1[i]);
+}
+        
+
+
+         // do while loop
+         let i = 0;
+        do{
+            console.log(i);
+            i++;
+        }while(i<5);
+  </script>
+    </body>
+    </html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Webpage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Brand</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <header class="bg-primary text-white text-center py-5" id="home">
+        <div class="container">
+            <h1>Welcome to Our Website</h1>
+            <p class="lead">Providing the best solutions for your business</p>
+            <a href="#services" class="btn btn-light">Learn More</a>
+        </div>
+    </header>
+    
+    <!-- About Section -->
+    <section class="container my-5" id="about">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>About Us</h2>
+                <p>We are a leading company in delivering high-quality solutions tailored to your needs.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="https://via.placeholder.com/500" class="img-fluid" alt="About Image">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="bg-light py-5" id="services">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Services</h2>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <h4>Web Development</h4>
+                    <p>We build responsive and modern websites.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h4>SEO Optimization</h4>
+                    <p>Improve your search rankings with our expertise.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h4>Marketing</h4>
+                    <p>Grow your business with effective marketing strategies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="container my-5" id="contact">
+        <h2 class="text-center">Contact Us</h2>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Your Company. All Rights Reserved.</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

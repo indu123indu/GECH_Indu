@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Positions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8fbff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #1e1e2d;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            height: 150px;  /* Ensuring equal height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icon {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .positions {
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 1px solid #1e1e2d;
+            color: #1e1e2d;
+            font-size: 14px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .highlight {
+            background: #1e1e2d;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Open Positions</h2>
+
+    <div class="container">
+        <div class="card">
+            <div class="icon">🎨</div>
+            <div class="title">Design</div>
+            <div class="positions">4 open positions</div>
+        </div>
+        <div class="card">
+            <div class="icon">💻</div>
+            <div class="title">Engineering</div>
+            <div class="positions highlight">8 open positions</div>
+        </div>
+        <div class="card">
+            <div class="icon">⚙️</div>
+            <div class="title">Operations</div>
+            <div class="positions">2 open positions</div>
+        </div>
+        <div class="card">
+            <div class="icon">👥</div>
+            <div class="title">People</div>
+            <div class="positions">6 open positions</div>
+        </div>
+        <div class="card">
+            <div class="icon">📋</div>
+            <div class="title">Sales</div>
+            <div class="positions">7 open positions</div>
+        </div>
+        <div class="card">
+            <div class="icon">🎓</div>
+            <div class="title">University</div>
+            <div class="positions">8 open positions</div>
+        </div>
+    </div>
+
+</body>
+</html>

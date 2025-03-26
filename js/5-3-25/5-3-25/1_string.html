@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+
+<body>
+    <h1>Strings in JS</h1>
+    <p>Methods in Strings</p>
+    <p>1. length</p>
+    <p>2. slice</p>
+    <p>3. substring</p>
+    <p>4. substr</p>
+    <p>5. replace</p>
+    <p>6. toUpperCase()</p>
+    <p>7. toLowerCase()</p>
+    <p>8. trim()</p>
+    <p>9. indexof()</p>
+    <p>10. startswith()</p>
+    <p>11. endsswith()</p>
+    <p>12. includes()</p>
+    <p>13. concat()</p>
+
+    <script>
+        //let str1 = "Hello world";
+        //console.log(str1);
+        //console.log(typeof str1);
+
+        let str1 = "Hello world";
+        const len = str1.length
+        console.log(`The length of string ${str1} is : ${len}`);
+        //console.log("The length of string " + str1 + " is : " + len);
+        //console.log("The length of string ", str1, " is : ", len);
+
+        //2. slice
+        let str2 = "javascript"
+        let str3 = str2.slice(2, 7);
+        console.log(`The sclied string is : ${str3}`);
+        console.log(str2[5]);
+        console.log("The scliced String: ", str2.slice(-8, -3));
+
+        //3. substring
+        let str4 = "HelloJavaScript";
+        let str5 = str4.substring(2, 7); //last index is excluded
+        console.log(`The string is ${str5}`);
+        console.log(`The string is ${str5.substring(-13, -9)}`);
+
+        //4. substr
+        let str6 = "Hello World";
+        let str7 = str6.substr(2, 7);
+        console.log(`The string is ${str7}`);
+
+        //5. replace
+        let str8 = "Java Script";
+        let str9 = str8.replace("Java", "Python");
+        console.log(`The string is ${str9}`);
+
+        //6. toUpperCase()
+
+        //7. toLowerCase()
+
+        //8. trim()
+        let str10 = "       hello          ";
+        let str11 = str10.trim()
+        console.log(`The string is ${str10}`);
+        console.log(`The string is ${str11}`);
+
+        //9. indexof()
+        let str12 = "Hello Javascript";
+        let index = str12.indexOf("ello");
+        console.log(`The index is ${index}`);
+
+        //10. startswith()
+        let str13 = "Hello Javascript";
+        let res = str13.startsWith("ello")
+        console.log(`The Result is ${res}`);
+
+        //11. endswith()
+
+        //12. includes()
+        let str14 = "Hello Java and Javascript";
+        let res1 = str14.includes("Python");
+        console.log(`The Result is ${res1}`);
+
+        //13. concat()
+        let str15 = "Hello";
+        let str16 = str15.concat(" ","World");
+        console.log(`The Result is ${str16}`);
+    </script>
+</body>
+
+</html>

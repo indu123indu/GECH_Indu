@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position in CSS</title>
+    <style>
+        /* Corrected Body Selector */
+        body {
+            margin: 100px auto;
+        }
+
+        /* Main Container */
+        .container {
+            width: 100vw;
+            height: 100vh;
+            border: 2px solid maroon;
+            background-color: lavenderblush;
+            margin: 50px 30px;
+            position: relative;
+        }
+
+        /* Child Divs */
+        .chaild {
+            height: 50px;
+            width: 50px;
+            border: 2px solid red;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            color: white;
+        }
+
+        /* First Box - Relative */
+        .first {
+            border: 2px solid pink;
+            background-color: aqua;
+            position: relative;
+            top: 100px;
+            left: 200px;
+        }
+
+        /* Second Box - Absolute */
+        .sec {
+            background-color: antiquewhite;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        /* Third Box - Fixed */
+        .thi {
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+            position: fixed;
+            right: 0;
+            top: 0;
+        }
+
+        /* Fourth Box */
+        .fou {
+            background-color: aqua;
+        }
+
+        /* Fifth Box */
+        .fiv {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="chaild first">1</div>
+        <div class="chaild sec">2</div>
+        <div class="chaild thi">3</div>
+        <div class="chaild fou">4</div>
+        <div class="chaild fiv">5</div>
+    </div>
+</body>
+</html>

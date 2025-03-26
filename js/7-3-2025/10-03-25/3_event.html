@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Event Example</title>
+</head>
+<body>
+
+    <form id="myForm">
+        <input type="text" id="nameInput" placeholder="Enter your name" required>
+        <input type="text" id="addressInput" placeholder="Enter your address" required>
+        <input type="text" id="genderInput" placeholder="Enter your gender" required>
+        <button type="submit">Submit</button>
+    </form>
+    <p id="message"></p>
+
+    <script>
+        // Get form elements
+        const form = document.getElementById("myForm");
+        const nameInput = document.getElementById("nameInput");
+        const addressInput = document.getElementById("addressInput");
+        const genderInput = document.getElementById("genderInput");
+        const message = document.getElementById("message");
+
+        // Add submit event listener
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevents page reload
+
+            // Concatenating all values in one message
+            message.textContent = Form submitted! Name: ${nameInput.value}, Gender: ${genderInput.value}, Address: ${addressInput.value};
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <style>
+        .outerContainer {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: antiquewhite;
+        }
+
+        .weatherImg {
+            width: 100px;
+            height: 80px;
+        }
+
+        .innerContainer {
+            height: auto;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            background: linear-gradient(144deg, rgba(62, 176, 199, 0.9) 13%, rgba(44, 68, 199, 0.9) 98%);
+            color: white;
+        }
+
+        #inputValue {
+            border: none;
+            outline: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 16px;
+        }
+
+        .btn {
+            background-color: white;
+            border-radius: 50%;
+            outline: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        #searchImage {
+            width: 30px;
+            height: 30px;
+        }
+
+        .details {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .details img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info h2 {
+            font-size: 20px;
+        }
+
+        /* Error message styling */
+        .error {
+            color: red;
+            font-size: 16px;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outerContainer">
+        <div class="innerContainer shadow-lg text-center">
+            <h1 class="fw-bolder">Weather App</h1>
+            <div class="search">
+                <input type="text" name="inputValue" id="inputValue" placeholder="Enter city name">
+                <button class="btn"><img src="./search.png" alt="Search" id="searchImage"></button>
+            </div>
+
+            <!-- Error message -->
+            <p class="error"></p>
+
+            <div class="weather">
+                <img src="./clouds.png" alt="Weather Icon" class="weatherImg">
+                <h2 class="temp">26°C</h2>
+                <h2 class="city">Hassan</h2>
+            </div>
+
+            <div class="details">
+                <div class="info">
+                    <img src="./humidity.png" alt="Humidity">
+                    <div>
+                        <h2 class="humidity">75%</h2>
+                        <h2>Humidity</h2>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="./wind.png" alt="Wind">
+                    <div>
+                        <h2 class="wind">45 km/h</h2>
+                        <h2>Wind</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script>
+        const apiKey = "700453d87ce8f8510911bbc4e835363b";
+        const apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=";
+
+        const button = document.querySelector(".btn");
+        const inputValue = document.querySelector("#inputValue");
+        const temp = document.querySelector(".temp");
+        const city_name = document.querySelector(".city");
+        const weatherImg = document.querySelector(".weatherImg");
+        const humidity = document.querySelector(".humidity");
+        const wind_speed = document.querySelector(".wind");
+        const error = document.querySelector(".error");
+
+        const getWeatherData = async (city) => {
+            try {
+                const fullUrl = `${apiUrl}${city}&appid=${apiKey}&units=metric`;
+                const res = await fetch(fullUrl);
+                if (!res.ok) {
+                    error.textContent = "Invalid City Name";
+                    error.style.display = "block";
+                    return;
+                }
+
+                const data = await res.json();
+                temp.textContent = Math.floor(data.main.temp) + "°C";
+                city_name.textContent = data.name;
+                humidity.textContent = data.main.humidity + "%";
+                wind_speed.textContent = Math.floor(data.wind.speed) + " km/h";
+
+                // Update weather image based on condition
+                const weatherCondition = data.weather[0].main;
+                switch (weatherCondition) {
+                    case "Clouds":
+                        weatherImg.src = "./clouds.png";
+                        break;
+                    case "Clear":
+                        weatherImg.src = "./clear.png";
+                        break;
+                    case "Drizzle":
+                        weatherImg.src = "./drizzle.png";
+                        break;
+                    case "Mist":
+                        weatherImg.src = "./mist.png";
+                        break;
+                    case "Rain":
+                        weatherImg.src = "./rain.png";
+                        break;
+                    case "Snow":
+                        weatherImg.src = "./snow.png";
+                        break;
+                    default:
+                        weatherImg.src = "./clouds.png";
+                }
+
+                error.style.display = "none";
+            } catch (error) {
+                console.error("Error fetching weather data:", error);
+                error.textContent = "Something went wrong. Try again.";
+                error.style.display = "block";
+            }
+        };
+
+        button.addEventListener("click", () => {
+            if (inputValue.value.trim() === "") {
+                error.textContent = "City name is required";
+                error.style.display = "block";
+            } else {
+                error.textContent = "";
+                getWeatherData(inputValue.value);
+            }
+        });
+    </script>
+</body>
+</html>

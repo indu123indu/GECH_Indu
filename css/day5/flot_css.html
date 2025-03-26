@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float in CSS</title> 
+    <style>
+        .container {
+            padding: 30px;
+            border: 2px solid black;
+            border-radius: 20px;
+            background-color: antiquewhite;
+        }
+
+        .container img {
+            float: left;
+            margin-right: 10px; /* Added margin for spacing */
+        }
+
+        .child {
+            border: 2px solid black;
+            padding: 10px;
+        }
+
+        .sec {
+            clear: both; /* Stops floating elements */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="./butterfly.jpg" alt="Image" width="60px" height="70px">
+        <p class="child first">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis beatae animi repellat, molestias nam officiis soluta possimus molestiae saepe eaque vero sequi quas distinctio delectus, maiores harum atque voluptatibus esse.
+        </p>
+        <div class="sec"></div> <!-- Proper clear fix -->
+        <p class="child">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, consequatur fuga nulla rerum magni commodi numquam obcaecati, explicabo autem, sed itaque laboriosam veritatis consequuntur id beatae repellat aliquid ipsa voluptatum!
+        </p>
+    </div>
+</body>
+</html>

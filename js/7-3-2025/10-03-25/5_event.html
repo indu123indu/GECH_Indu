@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document & Window Events</title>
+</head>
+<body>
+
+    <h1>JavaScript Document & Window Events</h1>
+    <p id="message"></p>
+
+    <script>
+        // Window Load Event
+        window.addEventListener("load", function() {
+            console.log("Window Loaded!");
+        });
+
+        // Window Resize Event
+        window.addEventListener("resize", function() {
+            console.log("Window resized to: " + window.innerWidth + "x" + window.innerHeight);
+        });
+
+        // Document Click Event
+        document.addEventListener("click", function() {
+            document.getElementById("message").textContent = "You clicked anywhere on the page!";
+        });
+
+        // Document Keydown Event
+        document.addEventListener("keydown", function(event) {
+            console.log("Key Pressed: " + event.key);
+        });
+    </script>
+
+</body>
+</html>

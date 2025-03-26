@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling in JavaScript</title>
+
+    <style>
+        body {
+            height: 1500px; /* Added height to allow scrolling */
+        }
+        #scrollMessage {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: yellow;
+            padding: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Event Handling in JavaScript</h1>
+
+    <h2>Different Types of Events</h2>
+    <p>1. Mouse Event</p>
+    <p>2. Keyboard Event</p>
+    <p>3. Form Event</p>
+    <p>4. Document Event</p>
+    <p>5. Clipboard Event</p>
+    <p>6. Media Event</p>
+
+    <!-- Mouse Event -->
+    <h3 id="htag">Hello HTML</h3>
+    <button id="btn">Change the text</button>
+
+    <!-- Keyboard Event -->
+    <h2>Press any key and see the magic!</h2>
+    <p id="keyOutput">Press a key...</p>
+
+    <!-- Form Event -->
+    <h1>Form Event </h1>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="30" required></textarea>
+        <br><br>
+
+        <button type="submit">Submit</button>
+        <button type="button" id="clearBtn">Clear</button>
+    </form>
+    <p id="formOutput"></p>
+
+    //4.document Event 
+
+    <h1>Document Events in JavaScript</h1>
+
+    <p>Open the browser console to see when the page has loaded.</p>
+    <p>Click anywhere on the page and see the click position.</p>
+    <p>Scroll down to see a message appear.</p>
+
+    <div id="scrollMessage">You are scrolling...</div>
+
+    <script>
+        // 1. Mouse Event: Change text on button click
+        const btn = document.getElementById("btn");
+        const htag = document.getElementById("htag");
+
+        btn.addEventListener("click", () => {
+            htag.textContent = "Hello JS!";
+        });
+
+        // 2. Keyboard Event: Display pressed key
+        document.addEventListener("keydown", function(event) {
+            document.getElementById("keyOutput").textContent =
+                `You pressed: ${event.key} (Key Code: ${event.keyCode})`;
+        });
+
+        // 3. Form Events
+        const form = document.getElementById("myForm");
+        const clearBtn = document.getElementById("clearBtn");
+        const formOutput = document.getElementById("formOutput");
+
+        // Form Submit Event
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+            if (name === "" || email === "" || message === "") {
+                formOutput.textContent = "Please fill in all fields!";
+                formOutput.style.color = "red";
+            } else {
+                formOutput.textContent = "Form Submitted Successfully!";
+                formOutput.style.color = "green";
+                form.reset(); // Clears form fields after submission
+            }
+        });
+
+        // Clear Button Click Event
+        clearBtn.addEventListener("click", function() {
+            form.reset(); // Clears all input fields
+            formOutput.textContent = "Form Cleared!";
+            formOutput.style.color = "black";
+        });
+
+        // Input Focus Event
+        document.getElementById("name").addEventListener("focus", function() {
+            this.style.backgroundColor = "lightyellow";
+        });
+
+        document.getElementById("email").addEventListener("focus", function() {
+            this.style.backgroundColor = "lightyellow";
+        });
+
+        document.getElementById("message").addEventListener("focus", function() {
+            this.style.backgroundColor = "lightyellow";
+        });
+
+        // Input Blur Event
+        document.getElementById("name").addEventListener("blur", function() {
+            this.style.backgroundColor = "";
+        });
+
+        document.getElementById("email").addEventListener("blur", function() {
+            this.style.backgroundColor = "";
+        });
+
+        document.getElementById("message").addEventListener("blur", function() {
+            this.style.backgroundColor = "";
+        });
+
+         // 1. Document Load Event
+         document.addEventListener("DOMContentLoaded", function() {
+            console.log("Document is fully loaded and parsed!");
+            alert("Welcome! The page has finished loading.");
+        });
+
+        // 2. Document Click Event
+        document.addEventListener("click", function(event) {
+            //console.log(`Clicked at X: ${event.clientX}, Y: ${event.clientY}`);
+           // alert(`You clicked at X: ${event.clientX}, Y: ${event.clientY}`);
+        });
+
+        // 3. Document Scroll Event
+        document.addEventListener("scroll", function() {
+            document.getElementById("scrollMessage").style.display = "block";
+            clearTimeout(window.scrollTimer); // Clear previous timeout
+            window.scrollTimer = setTimeout(() => {
+                document.getElementById("scrollMessage").style.display = "none";
+            }, 1000);
+        });
+
+    </script>
+</body>
+</html>

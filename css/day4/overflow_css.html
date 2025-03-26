@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow in CSS</title>
+    <style>
+        body {
+            padding: 40px;
+        } 
+        .container {
+            width: 20vw;  /* Fixed typo */
+            max-height: 150px; /* Added max-height */
+            border: 2px solid black;
+            background-color: aqua;
+            overflow: auto; /* Allows both vertical and horizontal scrolling */
+            
+           white-space-collapse: 10px;
+            
+        } 
+    </style>
+</head>
+<body>
+    <h1>Overflow </h1>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quae accusamus ipsam itaque ad recusandae. Corporis expedita, adipisci fugit hic pariatur architecto vero illum sed animi, blanditiis similique molestias ipsa?</p>
+
+    </div>
+</body>
+</html>

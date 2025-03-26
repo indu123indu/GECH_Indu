@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <h1>Promise Project</h1>
+    <h3 class="Headding1">Headding1</h3>
+    <h3 class="Headding2">Headding2</h3>
+    <h3 class="Headding3">Headding3</h3>
+    <h3 class="Headding4">Headding4</h3>
+    <h3 class="Headding5">Headding5</h3>
+
+    <script>
+        const Headding1 = document.querySelector(".Headding1");
+        const Headding2 = document.querySelector(".Headding2");
+        const Headding3 = document.querySelector(".Headding3");
+        const Headding4 = document.querySelector(".Headding4");
+        const Headding5 = document.querySelector(".Headding5");
+
+        const updateHeading = (element, text, color, time) => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (element) {
+                        element.textContent = text;
+                        element.style.color = color;
+                        resolve();
+                    } else {
+                        reject("Element not found");
+                    }
+                }, time);
+            });
+        };
+
+        // Example usage of updateHeading with promises
+        updateHeading(Headding1, "Updated Heading 1", "red", 1000)
+            .then(() => updateHeading(Headding2, "Updated Heading 2", "blue", 1000))
+            .then(() => updateHeading(Headding3, "Updated Heading 3", "green", 1000))
+            .then(() => updateHeading(Headding4, "Updated Heading 4", "purple", 1000))
+            .then(() => updateHeading(Headding5, "Updated Heading 5", "orange", 1000))
+            .catch((error) => console.error(error));
+    </script>
+</body>
+</html>

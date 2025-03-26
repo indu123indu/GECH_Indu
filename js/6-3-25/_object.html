@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <h1>Objects</h1>
+    <p> We can access the objects by .operator and[ ] </p>
+    <p>function inside class is called methods</p>
+    <p>function outside class is called function</p>
+    <p>object is callection of properties & methods</p>
+    <script>
+        const car_obj ={
+            carName: "Tesla",
+            type:"EV",
+            wheels: 4,
+            "four seat" : true,
+            speed:function(){
+                console.log("Tesla is moving by 60km/h");
+            }
+
+
+        }
+        console.log(car_obj);
+        console.log(car_obj.carName);
+        console.log(car_obj.type);
+        console.log(car_obj.wheels);
+        car_obj.speed();
+        console.log(car_obj["four seat"]);
+
+        //adding item to an object;
+        car_obj.color ="red";
+        console.log("car object: ", car_obj);
+        const new_obj= {...car_obj}
+        //deleteing item from object
+        delete car_obj.color;
+        console.log("After car object: ", car_obj);
+        
+    </script>
+    
+</body>
+</html>
