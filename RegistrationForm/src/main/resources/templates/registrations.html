@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Registration Form</title>
+</head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.add {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.add:hover {
+    background-color: #218838;
+}
+
+.edit, .delete {
+    padding: 6px 12px;
+    text-decoration: none;
+    color: white;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.edit {
+    background-color: #ffc107;
+}
+
+.edit:hover {
+    background-color: #e0a800;
+}
+
+.delete {
+    background-color: #dc3545;
+}
+
+.delete:hover {
+    background-color: #c82333;
+}
+</style>
+<body>
+    <h1 style="font-size:40px">Registration Form</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Phone</th>
+            <th>City</th>
+            <th>Gender</th>
+            <th>Skills</th>
+            <th>Address</th>
+            <th>Actions</th>
+        </tr>
+        <tbody>
+            <tr th:each="registration:${registrations}">
+                <td th:text="${registration.name}"></td>
+                <td th:text="${registration.age}"></td>
+                <td th:text="${registration.email}"></td>
+                <td th:text="${registration.phone}"></td>
+                <td th:text="${registration.password}"></td>
+                <td th:text="${registration.city}"></td>
+                <td th:text="${registration.gender}"></td>
+                <td th:text="${registration.skills}"></td>
+                <td th:text="${registration.address}"></td>
+                <td>
+                   <a th:href="@{/edit-registration(id=${registration.id})}" class="edit">Edit</a>
+                   <a th:href="@{/delete-registration(id=${registration.id})}" class="delete">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+     <a th:href="@{/register}" style="font-size:20px" class="add">Add Registration</a>
+</body>
+</html>
+
