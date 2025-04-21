@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee List</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #FF6F00, #E91E63, #673AB7, #009688, #4CAF50);
+            background-size: 500% 500%;
+            animation: gradientAnimation 10s ease infinite;
+            color: #fff;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Title Styling with Glowing Effect */
+        h1 {
+            padding: 40px 50px;
+            font-size: 3.5em;
+            text-transform: uppercase;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            letter-spacing: 5px;
+            text-shadow: 0 0 20px #FFEB3B, 0 0 30px #FF5722, 0 0 40px #FF5722;
+            animation: titleGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes titleGlow {
+            0% { text-shadow: 0 0 15px #FFEB3B, 0 0 25px #FF5722, 0 0 35px #FF5722; }
+            100% { text-shadow: 0 0 25px #FFEB3B, 0 0 35px #FF5722, 0 0 45px #FF5722; }
+        }
+
+        /* Add Employee Button */
+        .add-employee-btn {
+            padding: 20px 40px;
+            font-size: 1.5em;
+            color: #111;
+            text-decoration: none;
+            background: linear-gradient(135deg, #FF5722, #FFEB3B);
+            border-radius: 30px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .add-employee-btn:hover {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, #FFEB3B, #FF5722);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+            color: #000;
+        }
+
+        /* Success Message */
+        .success-message {
+            background-color: #28a745;
+            color: white;
+            padding: 20px;
+            font-size: 1.5em;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-top: 30px;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            animation: pulse 1.5s ease-out infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 30px #28a745; }
+            100% { box-shadow: 0 0 60px #28a745; }
+        }
+
+        /* Table Styling */
+        table {
+            width: 90%;
+            margin-top: 50px;
+            border-collapse: collapse;
+            border-radius: 15px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.2);
+            animation: bounceIn 1.5s ease-out;
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        th, td {
+            padding: 20px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        th {
+            background: linear-gradient(135deg, #FF5722, #FFEB3B);
+            color: white;
+            text-transform: uppercase;
+            border-bottom: 2px solid #fff;
+        }
+
+        tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        tr:hover {
+            background: rgba(255, 255, 255, 0.5);
+            transform: scale(1.03);
+            transition: transform 0.2s ease;
+        }
+
+        /* Image Styling */
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .action-buttons a {
+            padding: 15px 30px;
+            background: #2196F3;
+            color: white;
+            border-radius: 25px;
+            text-transform: uppercase;
+            font-size: 1.2em;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .action-buttons a:hover {
+            background: #1976D2;
+            box-shadow: 0 10px 20px #1976D2;
+            transform: scale(1.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            table {
+                width: 95%;
+            }
+
+            .add-employee-btn {
+                font-size: 1.2em;
+                padding: 15px 30px;
+            }
+
+            .action-buttons a {
+                font-size: 1em;
+                padding: 12px 24px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Employee List</h1>
+    <div>
+        <a href="/add-employee" class="add-employee-btn">Add New Employee</a>
+    </div>
+
+    <!-- Success message -->
+    <div th:if="${success}" class="success-message">
+        <p th:text="${success}"></p>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>Image</th>
+                <th>Document</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="employee : ${employees}">
+                <td th:text="${employee.name}"></td>
+                <td th:text="${employee.age}"></td>
+                <td th:text="${employee.email}"></td>
+                <td>
+                    <img th:if="${employee.imagePath}" th:src="@{'/images/' + ${employee.imagePath}}" alt="Employee Image" />
+                </td>
+                <td class="document">
+                    <span th:if="${employee.documentPath}" th:text="${employee.documentPath}"></span>
+                </td>
+                <td class="action-buttons">
+                    <a th:href="@{'/emp-edit?id=' + ${employee.id}}">Edit</a>
+                    <a th:href="@{'/emp-delete?id=' + ${employee.id}}">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
