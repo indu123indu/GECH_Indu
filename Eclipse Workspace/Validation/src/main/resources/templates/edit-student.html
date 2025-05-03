@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Add Student</title>
+</head>
+<body>
+    <h1>Edit Student</h1>
+    <div th:if="${failed}">
+	    <p th:text="${failed}"></p>
+	</div>
+    <form th:action="@{/edit-student(id=${student.id})}" enctype="multipart/form-data" method="post" th:object="${studentDTO}">
+        <!-- Name Input -->
+        <label for="name">Name:</label>
+        <input type="text" th:field="*{name}" id="name" placeholder="Enter your name"><br>
+        <p th:if="${#fields.hasErrors('name')}" th:text="${#fields.errors('name')}"></p>
+
+        <!-- Age Input -->
+        <label for="age">Age:</label>
+        <input type="number" th:field="*{age}" id="age" placeholder="Enter your age"><br>
+        <p th:if="${#fields.hasErrors('age')}" th:text="${#fields.errors('age')}"></p>
+
+        <!-- Email Input -->
+        <label for="email">Email:</label>
+        <input type="email" th:field="*{email}" id="email" placeholder="Enter your Email"><br>
+        <p th:if="${#fields.hasErrors('email')}" th:text="${#fields.errors('email')}"></p>
+
+        <!-- Password Input -->
+        <label for="password">Password:</label>
+        <input type="password" th:field="*{password}" id="password" placeholder="Enter your Password"><br>
+        <p th:if="${#fields.hasErrors('password')}" th:text="${#fields.errors('password')}"></p>
+		
+		 <!-- Image Input -->
+        <label for="image">Image:</label>
+        <img alt="image" height="100px" width="100px" th:src="@{'image/'+${student.imagePath}}">
+        <input type="file" th:field="*{image}" id="image"><br>
+        <p th:if="${#fields.hasErrors('image')}" th:text="${#fields.errors('image')}"></p>
+		
+		<!-- resume -->
+		<label for="resume">Resume:</label>
+        <iframe width="200px" height="100px" th:src = "@{'resume/'+${student.resumePath}}"></iframe>
+        <p th:text="${student.resumePath}"></p>
+        <input type="file" th:field="*{resume}" id="resume"><br>
+        <p th:if="${#fields.hasErrors('resume')}" th:text="${#fields.errors('resume')}"></p>
+	
+        <!-- Submit Button -->
+        <input type="submit" value="edit Student">
+    </form>
+</body>
+</html>
