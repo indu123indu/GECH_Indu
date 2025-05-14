@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #0066cc;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.admin-login {
+    color: yellow;
+}
+
+/* Hero Section Background */
+.hero {
+    background-image: url("../images/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h2, .hero p {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+/* About Section Background */
+.about {
+    background-image: url("../images/about-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.about h2, .about p {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}

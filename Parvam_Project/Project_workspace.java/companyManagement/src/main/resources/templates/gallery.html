@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery - Construction Company</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .gallery-section {
+            text-align: center;
+            padding: 50px;
+        }
+        .gallery-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        .gallery-card {
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: #fff;
+        }
+        .gallery-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .gallery-card h4 {
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Our Gallery</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="admin-login">Admin Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="gallery-section">
+        <h2>Our Work in Pictures</h2>
+
+        <div class="gallery-list">
+            <div class="gallery-card">
+                <img src="construction-site1.jpg" alt="Site 1">
+                <h4>Urban Project Phase 1</h4>
+            </div>
+
+            <div class="gallery-card">
+                <img src="interior-design.jpg" alt="Interior">
+                <h4>Modern Interior Design</h4>
+            </div>
+
+            <div class="gallery-card">
+                <img src="eco-construction.jpg" alt="Eco Project">
+                <h4>Eco-Friendly House</h4>
+            </div>
+
+            <div class="gallery-card">
+                <img src="bridge.jpg" alt="Bridge">
+                <h4>Bridge Construction</h4>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Construction Company. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
